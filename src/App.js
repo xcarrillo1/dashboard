@@ -1,16 +1,19 @@
 import React from 'react';
+import AvgRating from "./components/AvgRating.js";
+import Reviews from './components/Reviews.js';
+import SentimentalAna from './components/SentimentalAna.js';
+import Sidebar from './components/Sidebar.js';
+import WebsiteVis from './components/WebsiteVis.js';
+import "./styles.css";
 
 function App() {
   return (
-    <div style={{ textAlign: 'center' }}>
-      <header>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Sidebar />
+      <Reviews revTotal="1,281" />
+      <AvgRating rating="4.6" />
+      <SentimentalAna analysis="960 122 321" />
+      <WebsiteVis visits="821" />
     </div>
   );
 }
